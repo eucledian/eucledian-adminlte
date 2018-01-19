@@ -6,7 +6,6 @@ const resolve = require('resolve');
 
 module.exports = {
   name: 'eucledian-adminlte',
-  normalizeEntityName(){},
   included(){
     this._super.included.apply(this, arguments);
   },
@@ -27,22 +26,5 @@ module.exports = {
       result = path.join.apply(path, args);
     }
     return result;
-  },
-  afterInstall(){
-    return this.addAddonsToProject({
-      packages: [
-        { name: 'ember-font-awesome' },
-        { name: 'ember-power-select' },
-        { name: 'ember-toggle' },
-        { name: 'ember-cp-validations' },
-      ],
-      blueprintOptions: {
-        saveDev: true
-      },
-    }).then(() => {
-      return this.addPackagesToProject([
-        { name: 'adminlte' },
-      ]);
-    });
   },
 };
