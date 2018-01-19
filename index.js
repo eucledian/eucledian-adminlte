@@ -29,4 +29,21 @@ module.exports = {
     }
     return result;
   },
+  afterInstall(){
+    this.ui.writeLine('installing dependencies');
+    return this.addAddonsToProject({
+      packages: [
+        { name: 'ember-font-awesome' },
+        { name: 'ember-power-select' },
+        { name: 'ember-toggle' },
+        { name: 'ember-cp-validations' },
+      ],
+    }).then(() => {
+      return this.addPackagesToProject({
+        packages: [
+          { name: 'adminlte' },
+        ]
+      });
+    });
+  },
 };
