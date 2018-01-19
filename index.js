@@ -6,6 +6,7 @@ const resolve = require('resolve');
 
 module.exports = {
   name: 'eucledian-adminlte',
+  normalizeEntityName(){},
   included(){
     this._super.included.apply(this, arguments);
     this.ui.writeLine('Eucledian AdminLTE base package installed');
@@ -30,7 +31,7 @@ module.exports = {
   },
   afterInstall(){
     this.ui.writeLine('installing dependencies');
-    return this.addAddonsToProject({
+    return this.addPackagesToProject({
       packages: [
         { name: 'ember-font-awesome' },
         { name: 'ember-power-select' },
