@@ -3,7 +3,7 @@ import wait from 'ember-test-helpers/wait';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-moduleForComponent('form/form-file-input', 'Integration | Component | form/form file input', {
+moduleForComponent('form-file-input', 'Integration | Component | form file input', {
   integration: true
 });
 
@@ -18,7 +18,7 @@ test('it renders', function(assert) {
   this.set('label', label);
   this.set('model', model);
 
-  this.render(hbs`{{form/form-file-input model=model prop="image" label=label}}`);
+  this.render(hbs`{{form-file-input model=model prop="image" label=label}}`);
 
   let fileInput = this.$('.form-for-file-input input[type="file"]');
 

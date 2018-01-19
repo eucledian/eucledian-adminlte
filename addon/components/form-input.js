@@ -4,7 +4,7 @@ import layout from '../templates/components/form-input';
 
 export default Component.extend({
   layout,
-  classNames: ['form-for-input'],
+  classNames: ['form-group', 'form-for-input'],
   classNameBindings: ['propName'],
   placeholder: null,
   prop: null,

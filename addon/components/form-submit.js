@@ -6,6 +6,7 @@ export default Component.extend({
   tagName: 'button',
   action: null,
   type: 'submit',
+  classNames: ['btn', 'btn-primary', 'pull-right'],
   attributeBindings: ['disabled'],
   disabled: false,
   submitAction: null,

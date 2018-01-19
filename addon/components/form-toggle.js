@@ -4,7 +4,7 @@ import layout from '../templates/components/form-toggle';
 
 export default Component.extend({
   layout,
-  classNames: ['form-for-toggle'],
+  classNames: ['form-group', 'form-for-toggle'],
   classNameBindings: ['propName'],
   showLabels: false,
   disabled: false,

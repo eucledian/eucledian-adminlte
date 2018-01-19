@@ -15,12 +15,6 @@ module.exports = {
     browser: true
   },
   rules: {
-    'node/no-extraneous-require': ['error', {
-      allowModules: [
-        'broccoli-funnel',
-        'resolve',
-      ],
-    }]
   },
   overrides: [
     // node files
@@ -47,6 +41,15 @@ module.exports = {
       plugins: ['node'],
       rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
         // add your custom rules and overrides for node files here
+        'node/no-extraneous-require': ['error', {
+          "devDependencies": false,
+          "optionalDependencies": false,
+          "peerDependencies": false,
+          allowModules: [
+            'broccoli-funnel',
+            'resolve',
+          ],
+        }]
       })
     },
 

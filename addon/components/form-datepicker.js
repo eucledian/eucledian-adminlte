@@ -4,7 +4,7 @@ import layout from '../templates/components/form-datepicker';
 
 export default Component.extend({
   layout,
-  classNames: ['form-for-datepicker'],
+  classNames: ['form-group', 'form-for-datepicker'],
   classNameBindings: ['propName'],
   label: null,
   propName: computed(function(){

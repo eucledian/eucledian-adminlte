@@ -10,7 +10,7 @@ export default Component.extend({
     let selected = this.get('options').find(el => el.value === prop);
     this.set('selected', selected);
   },
-  classNames: ['form-for-select'],
+  classNames: ['form-group', 'form-for-select'],
   classNameBindings: ['propName'],
   label: null,
   options: computed(function(){ return new Array; }),

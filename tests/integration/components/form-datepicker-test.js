@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 import { openDatepicker } from 'ember-pikaday/helpers/pikaday';
 
-moduleForComponent('form/form-datepicker', 'Integration | Component | form/form datepicker', {
+moduleForComponent('form-datepicker', 'Integration | Component | form datepicker', {
   integration: true
 });
 
@@ -18,7 +18,7 @@ test('it renders', function(assert) {
   this.set('model', model);
   this.set('label', label);
 
-  this.render(hbs`{{form/form-datepicker
+  this.render(hbs`{{form-datepicker
                     model=model
                     prop='date'
                     label=label}}`);

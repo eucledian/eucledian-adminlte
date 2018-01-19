@@ -4,7 +4,7 @@ import layout from '../templates/components/form-textarea';
 
 export default Component.extend({
   layout,
-  classNames: ['form-for-textarea'],
+  classNames: ['form-group', 'form-for-textarea'],
   classNameBindings: ['propName'],
   placeholder: null,
   prop: null,

@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-moduleForComponent('form/form-textarea', 'Integration | Component | form/form textarea', {
+moduleForComponent('form-textarea', 'Integration | Component | form textarea', {
   integration: true
 });
 
@@ -16,7 +16,7 @@ test('it renders', function(assert) {
   this.set('label', label);
   this.set('placeholder', placeholder);
 
-  this.render(hbs`{{form/form-textarea
+  this.render(hbs`{{form-textarea
                     model=model
                     prop="name"
                     placeholder=placeholder
@@ -35,7 +35,7 @@ test('it renders without label', function(assert) {
   });
   this.set('model', model);
 
-  this.render(hbs`{{form/form-textarea
+  this.render(hbs`{{form-textarea
                     model=model
                     prop="name"}}`);
 
@@ -53,7 +53,7 @@ test('it renders errors', function(assert) {
   });
   this.set('model', model);
 
-  this.render(hbs`{{form/form-textarea model=model prop="name"}}`);
+  this.render(hbs`{{form-textarea model=model prop="name"}}`);
 
   assert.equal(this.$('.errors:first').text().trim(), 'Not present');
 });

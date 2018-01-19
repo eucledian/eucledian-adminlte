@@ -3,7 +3,7 @@ import { click } from 'ember-native-dom-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-moduleForComponent('form/form-toggle', 'Integration | Component | form/form toggle', {
+moduleForComponent('form-toggle', 'Integration | Component | form toggle', {
   integration: true
 });
 
@@ -16,7 +16,7 @@ test('it renders', async function(assert) {
   this.set('model', model);
   this.set('label', label);
 
-  this.render(hbs`{{form/form-toggle
+  this.render(hbs`{{form-toggle
                     model=model
                     prop="accepted"
                     label=label}}`);

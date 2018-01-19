@@ -12,7 +12,7 @@ export default Component.extend({
       this.set('hasFile', true);
     }
   },
-  classNames: ['form-for-file-input'],
+  classNames: ['form-group', 'form-for-file-input'],
   classNameBindings: ['propName', 'hasFile:has-file'],
   prop: null,
   label: 'Choose file',

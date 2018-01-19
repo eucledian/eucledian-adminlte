@@ -8,7 +8,7 @@ export default Component.extend({
     this._super(...arguments);
     this.set('selected', this.get(`model.${this.get('prop')}`));
   },
-  classNames: ['form-for-select-model'],
+  classNames: ['form-group', 'form-for-select-model'],
   classNameBindings: ['propName'],
   label: null,
   options: computed(function(){ return []; }),

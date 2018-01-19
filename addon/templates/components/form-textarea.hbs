@@ -3,7 +3,8 @@
 {{/if}}
 {{textarea
   value=(mut (get model prop))
-  placeholder=placeholder}}
+  placeholder=placeholder
+  class="form-control"}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">
     {{error.message}}

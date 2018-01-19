@@ -3,7 +3,7 @@ import { selectChoose } from 'ember-power-select/test-support/helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-moduleForComponent('form/form-select', 'Integration | Component | form/form select', {
+moduleForComponent('form-select', 'Integration | Component | form select', {
   integration: true
 });
 
@@ -26,7 +26,7 @@ test('it renders', async function(assert) {
   this.set('model', model);
   this.set('label', label);
 
-  this.render(hbs`{{form/form-select
+  this.render(hbs`{{form-select
                     model=model
                     label=label
                     prop="option"
@@ -60,7 +60,7 @@ test('it renders errors', function(assert) {
   });
   this.set('model', model);
 
-  this.render(hbs`{{form/form-select
+  this.render(hbs`{{form-select
                     model=model
                     prop="option"
                     options=model.options}}`);
