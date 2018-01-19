@@ -15,6 +15,12 @@ module.exports = {
     browser: true
   },
   rules: {
+    'node/no-extraneous-require': ['error', {
+      allowModules: [
+        'broccoli-funnel',
+        'resolve',
+      ],
+    }]
   },
   overrides: [
     // node files

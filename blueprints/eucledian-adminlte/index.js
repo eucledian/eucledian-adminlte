@@ -7,6 +7,8 @@ module.exports = {
       packages: [
         { name: 'ember-cp-validations' },
         { name: 'ember-font-awesome' },
+        { name: 'ember-i18n' },
+        { name: 'ember-i18n-cp-validations' },
         { name: 'ember-pikaday' },
         { name: 'ember-power-select' },
         { name: 'ember-toggle' },
