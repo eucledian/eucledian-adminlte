@@ -1,0 +1,17 @@
+{{#if label}}
+  <label for="{{prop}}">{{label}}</label>
+{{/if}}
+{{pikaday-input
+  value=(get model prop)
+  format="DD/MM/YYYY"
+  onSelection=(action 'onDateSelected')}}
+{{#each (get model.errors prop) as |error|}}
+  <div class="errors">
+    {{error.message}}
+  </div>
+{{/each}}
+{{#if (v-get model prop 'isInvalid')}}
+  <div class="errors">
+    {{v-get model prop 'message'}}
+  </div>
+{{/if}}

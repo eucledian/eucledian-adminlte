@@ -1,0 +1,14 @@
+{{#if label}}
+  <label for="{{prop}}">{{label}}</label>
+{{/if}}
+<input type="file" multiple="true" name="{{prop}}" id="{{prop}}" data-value={{get model prop}} onchange={{action "selectFile"}}>
+{{#if error}}
+  <ul>
+    {{#if exceedsFileSize}}
+      <li>{{exceedErrorText}}</li>
+    {{/if}}
+    {{#if unallowedFileType}}
+      <li>{{unallowedFileTypeText}}</li>
+    {{/if}}
+  </ul>
+{{/if}}

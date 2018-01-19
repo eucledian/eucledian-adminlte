@@ -1,0 +1,30 @@
+{{#if label}}
+  <label for="{{prop}}">{{label}}</label>
+{{/if}}
+{{#x-toggle
+  value=(get model prop)
+  onToggle=(action 'onToggle')
+  theme=theme
+  size=size
+  showLabels=showLabels
+  offLabel=defaultOffLabel
+  onLabel=defaultOnLabel
+  as |toggle|}}
+  {{#toggle.offLabel}}
+    {{offLabel}}
+  {{/toggle.offLabel}}
+  {{toggle.switch}}
+  {{#toggle.onLabel}}
+    {{onLabel}}
+  {{/toggle.onLabel}}
+{{/x-toggle}}
+{{#each (get model.errors prop) as |error|}}
+  <div class="errors">
+    {{error.message}}
+  </div>
+{{/each}}
+{{#if (v-get model prop 'isInvalid')}}
+  <div class="errors">
+    {{v-get model prop 'message'}}
+  </div>
+{{/if}}
