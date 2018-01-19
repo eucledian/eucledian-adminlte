@@ -5,10 +5,11 @@ module.exports = {
   afterInstall(){
     return this.addAddonsToProject({
       packages: [
+        { name: 'ember-cp-validations' },
         { name: 'ember-font-awesome' },
+        { name: 'ember-pikaday' },
         { name: 'ember-power-select' },
         { name: 'ember-toggle' },
-        { name: 'ember-cp-validations' },
       ],
       blueprintOptions: {
         saveDev: true

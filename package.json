@@ -1,6 +1,6 @@
 {
   "name": "eucledian-adminlte",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -21,7 +21,10 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-font-awesome": "^4.0.0-rc.2"
+    "ember-font-awesome": "^4.0.0-rc.2",
+    "ember-pikaday": "^2.2.3",
+    "ember-power-select": "^2.0.0-beta.0",
+    "ember-toggle": "^5.2.1"
   },
   "devDependencies": {
     "adminlte": "^2.4.1",
@@ -34,6 +37,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-moment-shim": "^3.5.0",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-sass": "^7.1.4",
     "ember-cli-shims": "^1.2.0",
@@ -42,7 +46,7 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
-    "ember-power-select": "^2.0.0-beta.0",
+    "ember-native-dom-helpers": "^0.5.10",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",
