@@ -8,6 +8,7 @@ module.exports = {
   name: 'eucledian-adminlte',
   included(){
     this._super.included.apply(this, arguments);
+    this.ui.writeLine('Eucledian AdminLTE base package installed');
   },
   treeForStyles(){
     let name = this.resolvePackagePath('adminlte/dist/css');
@@ -28,6 +29,7 @@ module.exports = {
     return result;
   },
   afterInstall(){
+    this.ui.writeLine('installing dependencies');
     return this.addAddonsToProject({
       packages: [
         { name: 'ember-font-awesome' },
