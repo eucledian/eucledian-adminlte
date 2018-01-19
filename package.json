@@ -20,8 +20,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1",
-    "ember-font-awesome": "^4.0.0-rc.2"
+    "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
     "adminlte": "^2.4.1",
@@ -41,7 +40,9 @@
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
+    "ember-font-awesome": "^4.0.0-rc.2",
     "ember-load-initializers": "^1.0.0",
+    "ember-power-select": "^2.0.0-beta.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",

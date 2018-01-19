@@ -27,4 +27,14 @@ module.exports = {
     }
     return result;
   },
+  afterInstall(){
+    return this.addAddonsToProject({
+      packages: [
+        { name: 'ember-font-awesome' },
+        { name: 'ember-power-select' },
+        { name: 'ember-toggle' },
+        { name: 'ember-cp-validations' },
+      ],
+    });
+  },
 };
