@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import layout from '../../templates/components/form/form-select-model';
+import layout from '../templates/components/form-select-model';
 
 export default Component.extend({
   layout,

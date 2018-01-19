@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 import { schedule } from "@ember/runloop";
 import layout from '../templates/components/lte-navigation';
 
@@ -41,6 +42,10 @@ export default Component.extend({
       contentWrapper.style.minHeight = `${minHeight}px`;
     });
   },
+  year: computed(function(){
+    let now = new Date();
+    return now.getFullYear();
+  }),
   actions: {
     /**
      * Calls logout function

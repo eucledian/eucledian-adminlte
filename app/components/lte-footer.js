@@ -1,1 +1,0 @@
-export { default } from 'eucledian-adminlte/components/lte-footer';

@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../../templates/components/form/form-submit';
+import layout from '../templates/components/form-submit';
 
 export default Component.extend({
   layout,
