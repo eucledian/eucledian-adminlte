@@ -1,8 +1,19 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import Service from '@ember/service';
+
+const routerStub = Service.extend({
+  transitionTo() {
+    return true;
+  },
+});
 
 moduleForComponent('navigation-link', 'Integration | Component | navigation link', {
-  integration: true
+  integration: true,
+  beforeEach(){
+    this.register('service:router', routerStub);
+    this.inject.service('router');
+  }
 });
 
 test('it renders', function(assert) {

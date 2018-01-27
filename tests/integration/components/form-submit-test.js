@@ -9,5 +9,6 @@ test('it renders', function(assert) {
   this.render(hbs`{{form-submit}}`);
 
   assert.equal(this.$().text().trim(), 'Accept');
+  assert.equal(this.$('button').attr('type'), 'submit');
 });
 
