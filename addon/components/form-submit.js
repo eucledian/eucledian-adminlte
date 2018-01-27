@@ -5,10 +5,10 @@ export default Component.extend({
   layout,
   tagName: 'button',
   action: null,
-  type: 'submit',
   classNames: ['btn', 'btn-primary', 'pull-right'],
-  attributeBindings: ['disabled'],
+  attributeBindings: ['type', 'disabled'],
   disabled: false,
+  type: 'submit',
   submitAction: null,
   label: 'Accept',
 });
