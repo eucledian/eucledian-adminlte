@@ -1,11 +1,10 @@
 {{#if label}}
   <label for="{{prop}}">{{label}}</label>
 {{/if}}
-{{pell-editor
+{{tinymce-editor
+  options=options
   value=(get model prop)
-  onChange=(action 'onChange')
-  pellOptions=options
-}}
+  onValueChanged=(action "onChange")}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">
     {{error.message}}

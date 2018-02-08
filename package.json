@@ -21,11 +21,11 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-tinymce": "^0.3.2",
     "ember-cp-validations": "^3.5.1",
     "ember-font-awesome": "^4.0.0-rc.2",
     "ember-i18n": "^5.1.0",
     "ember-i18n-cp-validations": "^3.0.2",
-    "ember-pell": "^1.2.1",
     "ember-pikaday": "^2.2.3",
     "ember-power-select": "^2.0.0-beta.0",
     "ember-toggle": "^5.2.1"
