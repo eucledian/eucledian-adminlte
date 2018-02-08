@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { pauseTest, render, settled } from '@ember/test-helpers';
+import { render, settled } from '@ember/test-helpers';
 import { selectChoose } from 'ember-power-select/test-support/helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
