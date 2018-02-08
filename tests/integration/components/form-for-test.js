@@ -23,6 +23,7 @@ test('it renders', async function(assert) {
     accepted: 0,
     date,
     image: null,
+    html: '<p>foo</p>',
     model: EmberObject.create({
       name: 'Inactive',
       value: 0,
@@ -64,6 +65,7 @@ test('it renders', async function(assert) {
       {{f.datepicker prop="date" label=label}}
       {{f.toggle prop="accepted" label=label}}
       {{f.file prop="image" label=label}}
+      {{f.wysiwyg prop="html" label=label}}
       {{f.submit}}
     {{/form-for}}
   `);
@@ -118,6 +120,11 @@ test('it renders', async function(assert) {
   let interactor = openDatepicker(this.$('.form-for-datepicker input'));
   interactor.selectDate(newDate);
   assert.deepEqual(model.get('date'), newDate);
+
+  let wysiwyg = firstElement.find('.model-html .pell-content');
+  assert.equal(wysiwyg.html(), '<p>foo</p>');
+  await fillIn('.form-for .model-html .pell-content', 'bar');
+  assert.deepEqual(model.get('html'), 'bar');
 
   // Renders Child toggle element
   assert.equal(firstElement.find('.model-accepted label[for="accepted"]').text().trim(), label);

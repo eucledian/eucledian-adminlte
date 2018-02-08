@@ -1,0 +1,19 @@
+{{#if label}}
+  <label for="{{prop}}">{{label}}</label>
+{{/if}}
+{{pell-editor
+  value=(get model prop)
+  onChange=(action 'onChange')
+  pellOptions=options
+}}
+{{#each (get model.errors prop) as |error|}}
+  <div class="errors">
+    {{error.message}}
+  </div>
+{{/each}}
+{{#if (v-get model prop 'isInvalid')}}
+  <div class="errors">
+    {{v-get model prop 'message'}}
+  </div>
+{{/if}}
+

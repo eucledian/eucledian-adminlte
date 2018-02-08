@@ -12,6 +12,7 @@ module.exports = {
         { name: 'ember-pikaday' },
         { name: 'ember-power-select' },
         { name: 'ember-toggle' },
+        { name: 'ember-pell' },
       ],
       blueprintOptions: {
         saveDev: true
