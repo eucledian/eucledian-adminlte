@@ -24,7 +24,7 @@ module('Integration | Component | form wysiwyg', function(hooks) {
 
     assert.equal(this.$('label').attr('for'), 'name');
     assert.equal(this.$('label').text().trim(), label);
-    assert.equal(this.$('.form-for-wysiwyg .pell-content').html(), '<p>foo</p>');
+    assert.equal(this.$('.form-for-wysiwyg iframe').contents().find('.mce-content-body').html(), '<p>foo</p>');
     assert.ok(this.$('.form-for-wysiwyg').hasClass('model-name'));
   });
 

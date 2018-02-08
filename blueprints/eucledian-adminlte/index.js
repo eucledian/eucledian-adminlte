@@ -12,7 +12,7 @@ module.exports = {
         { name: 'ember-pikaday' },
         { name: 'ember-power-select' },
         { name: 'ember-toggle' },
-        { name: 'ember-pell' },
+        { name: 'ember-cli-tinymce' },
       ],
       blueprintOptions: {
         saveDev: true
