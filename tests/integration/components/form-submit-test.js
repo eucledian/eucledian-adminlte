@@ -1,14 +1,15 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('form-submit', 'Integration | Component | form submit', {
-  integration: true
+module('Integration | Component | form submit', function(hooks) {
+  setupRenderingTest(hooks);
+
+  test('it renders', async function(assert) {
+    await render(hbs`{{form-submit}}`);
+
+    assert.equal(this.$().text().trim(), 'Accept');
+    assert.equal(this.$('button').attr('type'), 'submit');
+  });
 });
-
-test('it renders', function(assert) {
-  this.render(hbs`{{form-submit}}`);
-
-  assert.equal(this.$().text().trim(), 'Accept');
-  assert.equal(this.$('button').attr('type'), 'submit');
-});
-
