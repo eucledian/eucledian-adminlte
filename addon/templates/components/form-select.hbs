@@ -1,15 +1,25 @@
 {{#if label}}
   <label for="{{prop}}">{{label}}</label>
 {{/if}}
-{{#power-select
-  options=options
-  selected=selected
-  search=search
-  searchField=searchField
-  onchange=(action 'onSelect')
-  as |option|}}
-  {{get option name}}
-{{/power-select}}
+{{#if search}}
+  {{#power-select
+    selected=selected
+    search=(action search)
+    searchField=searchField
+    onchange=(action 'onSelect')
+    as |option|}}
+    {{get option name}}
+  {{/power-select}}
+{{else}}
+  {{#power-select
+    options=options
+    selected=selected
+    searchField=searchField
+    onchange=(action 'onSelect')
+    as |option|}}
+    {{get option name}}
+  {{/power-select}}
+{{/if}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">
     {{error.message}}
