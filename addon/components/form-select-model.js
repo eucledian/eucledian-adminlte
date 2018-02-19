@@ -15,7 +15,6 @@ export default Component.extend({
   prop: null,
   name: 'name',
   searchField: 'name',
-  search: undefined,
   selected: null,
   propName: computed(function(){
     return `model-${this.get('prop')}`;

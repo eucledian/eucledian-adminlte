@@ -27,7 +27,7 @@
     "ember-i18n": "^5.1.0",
     "ember-i18n-cp-validations": "^3.0.2",
     "ember-pikaday": "^2.2.3",
-    "ember-power-select": "^2.0.0-beta.0",
+    "ember-power-select": "^2.0.0-beta.2",
     "ember-toggle": "^5.2.1"
   },
   "devDependencies": {
@@ -51,8 +51,9 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-helpers": "^0.5.10",
+    "ember-power-select": "^2.0.0-beta.2",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~2.12.0",
+    "ember-source": "~2.18.2",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^5.2.1",
     "loader.js": "^4.2.3"
