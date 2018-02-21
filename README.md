@@ -1,5 +1,6 @@
 # eucledian-adminlte
 [![npm version](https://badge.fury.io/js/eucledian-adminlte.svg)](https://badge.fury.io/js/eucledian-adminlte)
+[![Build Status](https://travis-ci.org/eucledian/eucledian-adminlte.svg?branch=master)](https://travis-ci.org/eucledian/eucledian-adminlte)
 
 `eucledian-adminlte` is a implementation of the AdminLTE theme for Ember
 with some extra flair for forms and views

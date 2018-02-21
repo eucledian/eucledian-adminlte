@@ -19,7 +19,7 @@ module.exports = {
       },
     }).then(() => {
       return this.addPackagesToProject([
-        { name: 'adminlte' },
+        { name: 'admin-lte' },
       ]);
     });
   },

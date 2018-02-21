@@ -10,7 +10,7 @@ module.exports = {
     this._super.included.apply(this, arguments);
   },
   treeForStyles(){
-    let name = this.resolvePackagePath('adminlte/dist/css');
+    let name = this.resolvePackagePath('admin-lte/dist/css');
     return new Funnel(name, {
       destDir: 'eucledian-adminlte',
     });
