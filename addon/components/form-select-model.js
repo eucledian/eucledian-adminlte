@@ -12,6 +12,7 @@ export default Component.extend({
   classNameBindings: ['propName'],
   label: null,
   options: computed(function(){ return []; }),
+  disabled: false,
   prop: null,
   name: 'name',
   searchField: 'name',
