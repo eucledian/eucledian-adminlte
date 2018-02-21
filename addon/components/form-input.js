@@ -7,6 +7,7 @@ export default Component.extend({
   classNames: ['form-group', 'form-for-input'],
   classNameBindings: ['propName'],
   placeholder: null,
+  disabled: false,
   prop: null,
   label: null,
   type: 'text',

@@ -6,6 +6,7 @@ export default Component.extend({
   layout,
   classNames: ['form-group', 'form-for-datepicker'],
   classNameBindings: ['propName'],
+  disabled: false,
   label: null,
   propName: computed(function(){
     return `model-${this.get('prop')}`;

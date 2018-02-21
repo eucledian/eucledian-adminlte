@@ -2,17 +2,17 @@
   <label for="{{prop}}">{{label}}</label>
 {{/if}}
 {{#if search}}
-  {{#power-select
+  {{#power-select-multiple
     selected=selected
     search=search
+    options=options
     disabled=disabled
-    searchField=searchField
     onchange=(action 'onSelect')
     as |option|}}
     {{get option name}}
-  {{/power-select}}
+  {{/power-select-multiple}}
 {{else}}
-  {{#power-select
+  {{#power-select-multiple
     options=options
     selected=selected
     disabled=disabled
@@ -20,7 +20,7 @@
     onchange=(action 'onSelect')
     as |option|}}
     {{get option name}}
-  {{/power-select}}
+  {{/power-select-multiple}}
 {{/if}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">

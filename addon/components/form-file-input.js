@@ -24,6 +24,7 @@ export default Component.extend({
   filename: null,
   unallowedFileType: false,
   error: false,
+  disabled: false,
   exceedSize: false,
   value: null,
   hasFile: false,

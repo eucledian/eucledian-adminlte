@@ -15,6 +15,7 @@ export default Component.extend({
   label: null,
   options: computed(function(){ return new Array; }),
   prop: null,
+  disabled: false,
   name: 'name',
   search: undefined,
   searchField: 'name',

@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, triggerEvent } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
@@ -25,6 +25,9 @@ module('Integration | Component | form wysiwyg', function(hooks) {
     assert.equal(this.$('label').attr('for'), 'name');
     assert.equal(this.$('label').text().trim(), label);
     assert.equal(this.$('.form-for-wysiwyg iframe').contents().find('.mce-content-body').html(), '<p>foo</p>');
+    tinymce.activeEditor.setContent(`<p>bar</p>`);
+    let iframe = document.querySelector('iframe').contentWindow.document.body;
+    await triggerEvent(iframe, 'focus');
     assert.ok(this.$('.form-for-wysiwyg').hasClass('model-name'));
   });
 

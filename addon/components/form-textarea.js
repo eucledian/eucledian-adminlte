@@ -7,6 +7,7 @@ export default Component.extend({
   classNames: ['form-group', 'form-for-textarea'],
   classNameBindings: ['propName'],
   placeholder: null,
+  disabled: false,
   prop: null,
   label: null,
   propName: computed(function(){

@@ -4,6 +4,7 @@
 {{pikaday-input
   value=(get model prop)
   format="DD/MM/YYYY"
+  disabled=disabled
   onSelection=(action 'onDateSelected')}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">

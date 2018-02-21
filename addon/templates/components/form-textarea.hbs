@@ -4,6 +4,7 @@
 {{textarea
   value=(mut (get model prop))
   placeholder=placeholder
+  disabled=disabled
   class="form-control"}}
 {{#each (get model.errors prop) as |error|}}
   <div class="errors">
