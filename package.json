@@ -21,6 +21,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-sass": "^7.1.4",
     "ember-cli-tinymce": "^0.3.2",
     "ember-cp-validations": "^3.5.1",
     "ember-font-awesome": "^4.0.0-rc.2",
@@ -44,7 +45,6 @@
     "ember-cli-mirage": "^0.4.1",
     "ember-cli-moment-shim": "^3.5.0",
     "ember-cli-qunit": "^4.1.1",
-    "ember-cli-sass": "^7.1.4",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",

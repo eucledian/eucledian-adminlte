@@ -1,7 +1,8 @@
 <h1>Hola</h1>
 {{#form-for model=this as |f|}}
   {{f.input}}
-  {{f.selectModel search=(action 'githubQuery') prop="test"}}
-  {{f.selectModel options=model prop="test"}}
+  {{f.selectModel search=(action 'githubQuery') prop="car"}}
+  {{f.selectModel options=model.users prop="user"}}
+  {{f.multiModel options=model.parts prop="parts"}}
   {{f.wysiwyg prop="wysiwyg"}}
 {{/form-for}}

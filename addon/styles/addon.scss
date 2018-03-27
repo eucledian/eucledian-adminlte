@@ -1,0 +1,34 @@
+body > .ember-view {
+  position: relative;
+}
+
+.pos.navbar {
+  .navbar-brand {
+    padding: 2px;
+    img {
+      max-height: 100%;
+    }
+  }
+}
+
+header {
+  .logo {
+    img {
+      max-height: 45px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+label > .x-toggle-default.x-toggle-btn {
+  background-color: #E06666;
+}
+
+.x-toggle:checked + label > .x-toggle-default.x-toggle-btn {
+  background-color: #57C753;
+}
+
+.img-circle, .user-image {
+  background-color: #FFF;
+}

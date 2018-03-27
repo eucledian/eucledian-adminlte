@@ -6,7 +6,7 @@ export default Component.extend({
   layout,
   init(){
     this._super(...arguments);
-    this.set('selected', this.get(`model.${this.get('prop')}`));
+    this.set('selected', this.get(`model.${this.get('prop')}`).toArray());
   },
   classNames: ['form-group', 'form-for-multi-model'],
   classNameBindings: ['propName'],

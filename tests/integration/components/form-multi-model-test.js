@@ -19,10 +19,14 @@ module('Integration | Component | form multi model', function(hooks) {
     let model = run(() => this.store.createRecord('user', user.attrs));
     let part1 = server.create('part');
     let part2 = server.create('part');
+    let part3 = server.create('part');
     let options = run(() => [
       this.store.createRecord('part', part1.attrs),
       this.store.createRecord('part', part2.attrs),
+      this.store.createRecord('part', part3.attrs),
     ]);
+
+    run(() => model.get('parts').pushObject(options[options.length - 1]));
 
     this.set('options', options);
 
@@ -40,7 +44,7 @@ module('Integration | Component | form multi model', function(hooks) {
     await selectChoose('.form-for-multi-model .ember-power-select-trigger', part1.name);
     await selectChoose('.form-for-multi-model .ember-power-select-trigger', part2.name);
     assert.equal(model.get('parts.length'), options.length);
-    assert.equal(model.get('parts.firstObject.name'), part1.name);
+    assert.equal(model.get('parts.firstObject.name'), part3.name);
     assert.equal(model.get('parts.lastObject.name'), part2.name);
     assert.ok(this.$('.form-for-multi-model').hasClass('model-parts'));
   });
