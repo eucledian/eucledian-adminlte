@@ -18,6 +18,10 @@ export default Component.extend({
    */
   logoUrl: null,
   /**
+   * Profile Image
+   */
+  profileImage: '/eucledian-adminlte/user.svg',
+  /**
    * Left sidebar status
    */
   collapsed: false,
@@ -57,11 +61,13 @@ export default Component.extend({
      * Toggles left sidebar status
      */
     toggleNavigation(){
+      let klass = 'sidebar-collapse';
+      if(window.innerWidth < 768) { klass = 'sidebar-open'; }
       if(!this.get('collapsed')){
-        document.getElementsByTagName("body")[0].classList.add('sidebar-collapse');
+        document.getElementsByTagName("body")[0].classList.add(klass);
         this.set('collapsed', !this.get('collapsed'));
       } else {
-        document.getElementsByTagName("body")[0].classList.remove('sidebar-collapse');
+        document.getElementsByTagName("body")[0].classList.remove(klass);
         this.set('collapsed', !this.get('collapsed'));
       }
     },

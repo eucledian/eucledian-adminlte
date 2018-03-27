@@ -6,8 +6,9 @@ const resolve = require('resolve');
 
 module.exports = {
   name: 'eucledian-adminlte',
-  included(){
+  included(app){
     this._super.included.apply(this, arguments);
+    app.import('vendor/eucledian-adminlte.css');
   },
   treeForStyles(){
     let name = this.resolvePackagePath('admin-lte/dist/css');
