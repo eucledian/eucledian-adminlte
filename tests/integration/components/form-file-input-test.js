@@ -40,4 +40,18 @@ module('Integration | Component | form file input', function(hooks) {
       assert.equal(model.get('image'), 'data:image/png;base64,Zm9vYmFy');
     });
   });
+
+  test('it renders errors', async function(assert) {
+    let model = EmberObject.create({
+      name: 'foo',
+      errors: {
+        name: [{ message: 'Not present' }]
+      }
+    });
+    this.set('model', model);
+
+    await render(hbs`{{form-file-input model=model prop="name"}}`);
+
+    assert.equal(this.$('.errors:first').text().trim(), 'Not present');
+  });
 });
