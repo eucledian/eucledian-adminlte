@@ -1,0 +1,6 @@
+{{#if label}}
+  <label for="{{prop}}">{{label}}</label>
+{{/if}}
+{{#multiselect-checkboxes options=perms selection=selectedPerms onchange=(action ‘updateSelection’) class=”checkbox” as |perm isSelected|}}
+  <li class=”checkbox”><label>{{input type=’checkbox’ checked=isSelected}}<b>{{perm}}</b></label></li>
+{{/multiselect-checkboxes}}
